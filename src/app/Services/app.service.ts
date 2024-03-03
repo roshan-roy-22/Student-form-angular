@@ -11,20 +11,20 @@ export class AppService {
 
   //add Student
   addStudent(data:any):Observable<any>{
-   return  this.http.post('http://localhost:3000/students',data)
+   return  this.http.post('https://student-reg-angular-server.onrender.com',data)
   }
 
   //get student
   getAllStudent():Observable<any>{
-    return this.http.get('http://localhost:3000/students');
+    return this.http.get('https://student-reg-angular-server.onrender.com');
   }
 
   deleteStudent(id:any):Observable<any>{
-    return this.http.delete(`http://localhost:3000/students/${id}`)
+    return this.http.delete(`https://student-reg-angular-server.onrender.com/${id}`)
   }
 
   updateStudent(id:any,data:any):Observable<any>{
-    return this.http.put(`http://localhost:3000/students/${id}`,data)
+    return this.http.put(`https://student-reg-angular-server.onrender.com/${id}`,data)
   }
 
 
