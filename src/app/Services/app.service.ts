@@ -11,20 +11,20 @@ export class AppService {
 
   //add Student
   addStudent(data:any):Observable<any>{
-   return  this.http.post(`${this.SERVER_URL}`,data)
+   return  this.http.post(`${this.SERVER_URL}/students`,data)
   }
 
   //get student
   getAllStudent():Observable<any>{
-    return this.http.get(`${this.SERVER_URL}`);
+    return this.http.get(`${this.SERVER_URL}/students`);
   }
 
   deleteStudent(id:any):Observable<any>{
-    return this.http.delete(`${this.SERVER_URL}/${id}`)
+    return this.http.delete(`${this.SERVER_URL}/students/${id}`)
   }
 
   updateStudent(id:any,data:any):Observable<any>{
-    return this.http.put(`${this.SERVER_URL}/${id}`,data)
+    return this.http.put(`${this.SERVER_URL}/students/${id}`,data)
   }
 
 
